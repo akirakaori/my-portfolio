@@ -1,6 +1,6 @@
+"use client";
 import { motion } from 'motion/react';
 import { ArrowRight, Download } from 'lucide-react';
-
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">

@@ -1,6 +1,8 @@
+"use client";
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Github, Linkedin, Twitter } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -58,12 +60,12 @@ export default function Navbar() {
             transition={{ delay: 0.5 }}
             className="flex items-center space-x-4 border-l border-white/10 pl-8"
           >
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              <Github size={18} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              <Linkedin size={18} />
-            </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <FaGithub size={18} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <FaLinkedin size={18} />
+              </a>
           </motion.div>
         </div>
 
@@ -97,15 +99,15 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="flex space-x-6 pt-4 border-t border-white/10">
-                <a href="#" className="text-gray-400 hover:text-white">
-                  <Github size={24} />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  <Linkedin size={24} />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  <Twitter size={24} />
-                </a>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    <FaGithub size={24} />
+                  </a>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    <FaLinkedin size={24} />
+                  </a>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    <FaTwitter size={24} />
+                  </a>
               </div>
             </div>
           </motion.div>

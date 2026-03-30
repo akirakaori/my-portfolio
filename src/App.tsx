@@ -1,7 +1,6 @@
 import About from "./components/About";
 
 import Contact from "./components/Contact";
-import Sustact from "./components/Sustact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -21,7 +20,6 @@ export default function App() {
         <Skills />
         <Projects />
         <Contact />
-        <Sustact />
       </main>
       <Footer />
     </div>
