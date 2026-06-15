@@ -124,7 +124,7 @@ export default function HeroSection() {
     <section
       id="home"
       className={cn(
-        "relative isolate flex min-h-screen overflow-hidden px-4 text-white sm:px-6 lg:px-8",
+        "relative isolate z-50 flex min-h-screen overflow-hidden px-4 text-white sm:px-6 lg:px-8",
         isDarkMode
           ? "bg-[#030014]"
           : "bg-[radial-gradient(circle_at_top,#eef2ff_0%,#e0f2fe_34%,#f8fafc_72%)] text-slate-950",
@@ -158,7 +158,7 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         aria-label="Primary navigation"
-        className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#030014]/55 backdrop-blur-2xl"
+        className="fixed left-0 right-0 top-0 z-[100] pointer-events-auto border-b border-white/10 bg-[#030014]/55 backdrop-blur-2xl"
       >
         <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <a href="#home" className="text-sm font-black tracking-wide sm:text-base">
