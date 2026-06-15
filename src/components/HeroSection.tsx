@@ -1,283 +1,156 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useState } from "react";
 import { motion } from "motion/react";
 import {
-  ArrowDown,
   ArrowRight,
-  BriefcaseBusiness,
-  Code2,
   Download,
   Mail,
   Sparkles,
-  Zap,
+  Code2,
+  Database,
+  Server,
 } from "lucide-react";
 
-import { cn } from "../lib/utils";
-
 const stats = [
-  { value: "2+", label: "Years Experience", icon: BriefcaseBusiness },
-  { value: "15+", label: "Projects Completed", icon: Code2 },
-  { value: "10+", label: "Technologies", icon: Zap },
-  { value: "100%", label: "Commitment", icon: Sparkles },
+  { value: "15+", label: "Projects" },
+  { value: "10+", label: "Technologies" },
+  { value: "2+", label: "Years Learning" },
 ];
-
-const particles = [
-  { left: "9%", top: "24%", size: 3, delay: 0.1, duration: 5.5 },
-  { left: "18%", top: "68%", size: 4, delay: 1.1, duration: 6.2 },
-  { left: "30%", top: "16%", size: 2, delay: 0.6, duration: 5.8 },
-  { left: "42%", top: "78%", size: 3, delay: 1.8, duration: 6.8 },
-  { left: "58%", top: "18%", size: 4, delay: 0.8, duration: 5.6 },
-  { left: "72%", top: "64%", size: 2, delay: 1.5, duration: 6.1 },
-  { left: "83%", top: "28%", size: 3, delay: 0.3, duration: 5.9 },
-  { left: "91%", top: "74%", size: 4, delay: 2.1, duration: 6.5 },
-];
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 26 },
-  visible: { opacity: 1, y: 0 },
-};
-
-function HeroButton({
-  children,
-  className,
-  href,
-  download,
-  variant = "secondary",
-}: {
-  children: React.ReactNode;
-  className?: string;
-  href: string;
-  download?: boolean;
-  variant?: "primary" | "secondary";
-}) {
-  return (
-    <motion.a
-      whileHover={{ y: -3, scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      href={href}
-      download={download}
-      className={cn(
-        "group inline-flex h-12 w-full items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold transition sm:w-auto",
-        "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-300",
-        variant === "primary"
-          ? "bg-white text-slate-950 shadow-[0_0_38px_rgba(147,51,234,0.32)] hover:bg-violet-50"
-          : "border border-white/15 bg-white/[0.06] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.09)] backdrop-blur-xl hover:border-white/25 hover:bg-white/[0.1]",
-        className,
-      )}
-    >
-      {children}
-    </motion.a>
-  );
-}
 
 export default function HeroSection() {
-  const [imageFailed, setImageFailed] = useState(false);
-
-  const particleNodes = useMemo(
-    () =>
-      particles.map((particle, index) => (
-        <motion.span
-          key={`${particle.left}-${particle.top}`}
-          aria-hidden="true"
-          className="absolute rounded-full bg-cyan-200 shadow-[0_0_18px_rgba(125,211,252,0.95)]"
-          style={{
-            left: particle.left,
-            top: particle.top,
-            height: particle.size,
-            width: particle.size,
-          }}
-          animate={{ opacity: [0.18, 0.95, 0.18], y: [0, -18, 0] }}
-          transition={{
-            delay: particle.delay + index * 0.05,
-            duration: particle.duration,
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
-        />
-      )),
-    [],
-  );
-
   return (
     <section
       id="home"
-      className={cn(
-        "relative isolate flex min-h-screen overflow-hidden bg-[#030014] px-4 text-white sm:px-6 lg:px-8",
-      )}
+      className="relative min-h-screen overflow-hidden bg-[#050014] px-6 pt-36 pb-20 text-white"
     >
-      <div className="pointer-events-none absolute inset-0 -z-20">
-        <motion.div
-          aria-hidden="true"
-          className="absolute -left-24 top-10 h-80 w-80 rounded-full bg-fuchsia-600/30 blur-[110px]"
-          animate={{ scale: [1, 1.18, 1], x: [0, 24, 0] }}
-          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          aria-hidden="true"
-          className="absolute right-[-10%] top-20 h-[32rem] w-[32rem] rounded-full bg-blue-600/25 blur-[130px]"
-          animate={{ scale: [1.08, 0.94, 1.08], y: [0, 28, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          aria-hidden="true"
-          className="absolute bottom-[-16rem] left-1/2 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-violet-700/20 blur-[140px]"
-          animate={{ opacity: [0.45, 0.75, 0.45] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(circle_at_center,black,transparent_78%)]" />
-        {particleNodes}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute left-[-12%] top-20 h-96 w-96 rounded-full bg-purple-600/25 blur-[130px]" />
+        <div className="absolute right-[-10%] bottom-10 h-[30rem] w-[30rem] rounded-full bg-blue-600/20 blur-[130px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:80px_80px] opacity-60" />
       </div>
 
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center pb-10 pt-24 text-center sm:pt-28">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1fr_0.85fr]">
         <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="relative mb-5"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
         >
-          <motion.div
-            className="absolute -inset-5 rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-400 opacity-50 blur-2xl"
-            animate={{ rotate: 360, scale: [1, 1.06, 1] }}
-            transition={{ rotate: { duration: 10, repeat: Infinity, ease: "linear" }, scale: { duration: 4, repeat: Infinity } }}
-          />
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="relative grid h-32 w-32 place-items-center rounded-full bg-gradient-to-br from-fuchsia-400 via-violet-500 to-sky-400 p-[3px] shadow-[0_0_54px_rgba(124,58,237,0.48)] sm:h-40 sm:w-40"
-          >
-            <div className="relative h-full w-full overflow-hidden rounded-full border border-white/20 bg-slate-950">
-              {imageFailed ? (
-                <div className="grid h-full w-full place-items-center bg-[radial-gradient(circle_at_35%_25%,rgba(125,211,252,0.36),transparent_32%),linear-gradient(135deg,#1e1b4b,#581c87_52%,#082f49)] text-4xl font-black text-white">
-                  AK
-                </div>
-              ) : (
-                <Image
-                  src="/profile.jpg"
-                  alt="Portrait of Ashika Kambang"
-                  fill
-                  priority
-                  sizes="(max-width: 640px) 128px, 160px"
-                  className="object-cover"
-                  onError={() => setImageFailed(true)}
-                />
-              )}
-            </div>
-          </motion.div>
-        </motion.div>
+          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-xs font-semibold text-purple-100 backdrop-blur-xl">
+            <Sparkles size={14} className="text-purple-300" />
+            Available for internships & graduate opportunities
+          </div>
 
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.65, delay: 0.12, ease: "easeOut" }}
-          className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.07] px-4 py-2 text-xs font-semibold text-violet-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_14px_48px_rgba(88,28,135,0.28)] backdrop-blur-2xl"
-        >
-          <span aria-hidden="true">✨</span>
-          Available for new opportunities
-        </motion.div>
+          <h1 className="max-w-4xl text-5xl font-black leading-[1.02] tracking-tight md:text-6xl xl:text-7xl">
+            Building{" "}
+            <span className="gradient-text">Scalable</span>
+            <br />
+            Software Solutions
+          </h1>
 
-        <motion.h1
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.75, delay: 0.2, ease: "easeOut" }}
-          className="max-w-6xl text-balance text-5xl font-black leading-[0.92] tracking-normal text-white sm:text-7xl md:text-8xl lg:text-[7.6rem]"
-        >
-          Building Scalable
-          <br />
-          <span className="bg-gradient-to-r from-fuchsia-300 via-violet-300 to-cyan-300 bg-[length:220%_auto] bg-clip-text text-transparent drop-shadow-[0_0_34px_rgba(168,85,247,0.42)]">
-            Software
-          </span>{" "}
-          Solutions
-        </motion.h1>
+          <p className="mt-7 text-xl font-semibold text-purple-200">
+            Backend & Full-Stack Developer
+          </p>
 
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.65, delay: 0.32, ease: "easeOut" }}
-          className="mt-5 text-base font-semibold text-sky-100 sm:text-lg"
-        >
-          Backend | Full-Stack Developer
-        </motion.p>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-400">
+            I build secure backend systems, full-stack applications, APIs, and
+            real-world software solutions using ASP.NET Core, Java, React,
+            Node.js, PostgreSQL, and modern engineering practices.
+          </p>
 
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.65, delay: 0.42, ease: "easeOut" }}
-          className="mt-4 max-w-3xl text-pretty text-sm leading-7 text-slate-300 sm:text-base md:text-lg"
-        >
-          I build scalable software systems and real-world solutions using modern backend architecture,
-          cloud technologies, and intuitive user experiences.
-        </motion.p>
+          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#projects"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-bold text-black transition hover:bg-purple-100"
+            >
+              View Projects <ArrowRight size={16} />
+            </a>
 
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.65, delay: 0.52, ease: "easeOut" }}
-          className="mt-8 flex w-full max-w-xl flex-col items-center justify-center gap-3 sm:flex-row"
-        >
-          <HeroButton href="#projects">
-            View Projects
-            <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-          </HeroButton>
-          <HeroButton href="/cv/Ashika-Kambang-Resume.pdf" download>
-            Download CV
-            <Download className="h-4 w-4" />
-          </HeroButton>
-          <HeroButton href="#contact">
-            Contact Me
-            <Mail className="h-4 w-4" />
-          </HeroButton>
-        </motion.div>
+            <a
+              href="/cv/Ashika-Kambang-Resume.pdf"
+              download
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-6 text-sm font-bold text-white transition hover:bg-white/10"
+            >
+              Download CV <Download size={16} />
+            </a>
 
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.75, delay: 0.62, ease: "easeOut" }}
-          className="mt-10 grid w-full max-w-4xl grid-cols-2 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.055] shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_28px_100px_rgba(15,23,42,0.36)] backdrop-blur-2xl md:grid-cols-4"
-        >
-          {stats.map((stat, index) => {
-            const Icon = stat.icon;
+            <a
+              href="#contact"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-6 text-sm font-bold text-white transition hover:bg-white/10"
+            >
+              Contact Me <Mail size={16} />
+            </a>
+          </div>
 
-            return (
+          <div className="mt-12 grid max-w-xl grid-cols-3 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl">
+            {stats.map((stat, index) => (
               <div
                 key={stat.label}
-                className={cn(
-                  "relative flex min-h-28 flex-col items-center justify-center px-3 py-5",
-                  index !== 0 && "md:border-l md:border-white/10",
-                  index % 2 === 1 && "border-l border-white/10 md:border-l",
-                  index > 1 && "border-t border-white/10 md:border-t-0",
-                )}
+                className={`p-5 text-center ${
+                  index !== 0 ? "border-l border-white/10" : ""
+                }`}
               >
-                <Icon className="mb-2 h-4 w-4 text-violet-300" aria-hidden="true" />
-                <strong className="bg-gradient-to-r from-fuchsia-300 to-sky-300 bg-clip-text text-2xl font-black text-transparent sm:text-3xl">
+                <div className="gradient-text text-3xl font-black">
                   {stat.value}
-                </strong>
-                <span className="mt-1 text-xs font-medium text-slate-400">{stat.label}</span>
+                </div>
+                <p className="mt-1 text-xs text-gray-400">{stat.label}</p>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </motion.div>
 
-        <motion.a
-          href="#about"
-          aria-label="Scroll to about section"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.1, duration: 0.7 }}
-          className="mt-7 hidden h-11 w-7 items-start justify-center rounded-full border border-white/20 p-2 text-white/70 sm:flex"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.94, x: 24 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative mx-auto w-full max-w-[420px]"
         >
-          <motion.span animate={{ y: [0, 12, 0] }} transition={{ duration: 1.6, repeat: Infinity }}>
-            <ArrowDown className="h-3 w-3" />
-          </motion.span>
-        </motion.a>
+          <div className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-purple-500/30 via-violet-500/10 to-blue-500/20 blur-3xl" />
+
+          <div className="relative rounded-[2.5rem] border border-white/10 bg-white/[0.05] p-3 shadow-2xl backdrop-blur-xl">
+            <div className="relative h-[480px] overflow-hidden rounded-[2rem] bg-gradient-to-br from-purple-950 to-slate-950">
+              <Image
+                src="/profile.jpg"
+                alt="Ashika Kambang"
+                fill
+                priority
+                sizes="(min-width: 1024px) 420px, 90vw"
+                className="object-cover"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050014]/45 via-transparent to-transparent" />
+            </div>
+          </div>
+
+          <div className="absolute -left-6 top-16 rounded-2xl border border-white/10 bg-black/60 p-4 backdrop-blur-xl">
+            <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-xl bg-purple-500/15 text-purple-300">
+              <Server size={18} />
+            </div>
+            <p className="text-[10px] uppercase tracking-[0.25em] text-purple-300">
+              Focus
+            </p>
+            <p className="mt-1 text-sm font-bold text-white">
+              Backend Systems
+            </p>
+          </div>
+
+          <div className="absolute -right-5 bottom-24 rounded-2xl border border-white/10 bg-black/60 p-4 backdrop-blur-xl">
+            <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-500/15 text-blue-300">
+              <Database size={18} />
+            </div>
+            <p className="text-[10px] uppercase tracking-[0.25em] text-purple-300">
+              Building
+            </p>
+            <p className="mt-1 text-sm font-bold text-white">Real Projects</p>
+          </div>
+
+          <div className="absolute left-1/2 top-[-22px] -translate-x-1/2 rounded-2xl border border-white/10 bg-black/60 px-5 py-3 backdrop-blur-xl">
+            <div className="flex items-center gap-2 text-sm font-bold text-white">
+              <Code2 size={16} className="text-purple-300" />
+              Full-Stack Developer
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
