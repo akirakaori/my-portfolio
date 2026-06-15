@@ -13,10 +13,10 @@ import {
 } from "react-icons/fa";
 
 const stats = [
-  { value: "20+", label: "Projects Built" },
-  { value: "3+", label: "Years Learning" },
-  { value: "10+", label: "Technologies" },
-  { value: "1000+", label: "Hours Coding" },
+  { value: "10+", label: "Projects Built" },
+  { value: "2+", label: "Years Learning" },
+  { value: "5+", label: "Technologies" },
+  { value: "350+", label: "Hours Coding" },
 ];
 
 const focusAreas = [

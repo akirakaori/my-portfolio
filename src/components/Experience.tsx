@@ -10,6 +10,26 @@ import {
 } from "lucide-react";
 
 const experiences = [
+    {
+    type: "Education",
+    icon: <GraduationCap size={22} />,
+    title: "BSc (Hons) Computing",
+    organization: "Islington College",
+    link: "#",
+    period: "2023 - Present",
+    location: "Kathmandu, Nepal",
+    description: [
+      "Studying computing with focus on software engineering, databases, cloud computing, AI, and full-stack development.",
+      "Built academic and real-world projects across healthcare, automation, IoT, machine learning, and web systems.",
+    ],
+    tech: [
+      "Software Engineering",
+      "Cloud Computing",
+      "AI",
+      "Databases",
+      "Full-Stack",
+    ],
+  },
   {
     type: "Internship",
     icon: <BriefcaseBusiness size={22} />,
@@ -33,26 +53,7 @@ const experiences = [
       "JavaScript",
     ],
   },
-  {
-    type: "Education",
-    icon: <GraduationCap size={22} />,
-    title: "BSc (Hons) Computing",
-    organization: "Islington College",
-    link: "#",
-    period: "2023 - Present",
-    location: "Kathmandu, Nepal",
-    description: [
-      "Studying computing with focus on software engineering, databases, cloud computing, AI, and full-stack development.",
-      "Built academic and real-world projects across healthcare, automation, IoT, machine learning, and web systems.",
-    ],
-    tech: [
-      "Software Engineering",
-      "Cloud Computing",
-      "AI",
-      "Databases",
-      "Full-Stack",
-    ],
-  },
+  
   {
     type: "Certifications",
     icon: <Award size={22} />,
