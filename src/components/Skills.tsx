@@ -1,96 +1,144 @@
 "use client";
-import { motion } from 'motion/react';
-import { Cpu, Globe, Layout, Database, Terminal, Layers } from 'lucide-react';
 
-const skillCategories = [
+import { motion } from "motion/react";
+import {
+  Cpu,
+  Code2,
+  Database,
+  Server,
+  Wrench,
+  Cloud,
+} from "lucide-react";
+
+const skills = [
   {
-    title: 'Frontend',
-    icon: <Layout className="text-purple-400" />,
-    skills: [
-      { name: 'React / Next.js', level: 90 },
-      { name: 'TypeScript', level: 85 },
-      { name: 'Tailwind CSS', level: 95 },
-      { name: 'Framer Motion', level: 80 },
-    ]
+    title: "Java",
+    category: "Language",
+    icon: <Code2 />,
+    description: "Building backend logic, object-oriented systems, and enterprise applications.",
   },
   {
-    title: 'Backend',
-    icon: <Database className="text-blue-400" />,
-    skills: [
-      { name: 'Node.js / Express', level: 85 },
-      { name: 'PostgreSQL', level: 75 },
-      { name: 'MongoDB', level: 80 },
-      { name: 'GraphQL', level: 70 },
-    ]
+    title: "C# / ASP.NET Core",
+    category: "Backend",
+    icon: <Server />,
+    description: "Developing secure APIs, web applications, and full-stack systems.",
   },
   {
-    title: 'Tools & Others',
-    icon: <Terminal className="text-purple-400" />,
-    skills: [
-      { name: 'Git / GitHub', level: 90 },
-      { name: 'Docker', level: 65 },
-      { name: 'AWS / Vercel', level: 75 },
-      { name: 'Figma', level: 70 },
-    ]
-  }
+    title: "Python",
+    category: "Language",
+    icon: <Code2 />,
+    description: "Working on scripting, data analysis, automation, and AI-powered solutions.",
+  },
+  {
+    title: "JavaScript",
+    category: "Language",
+    icon: <Code2 />,
+    description: "Creating interactive web applications and connecting frontend with backend APIs.",
+  },
+  {
+    title: "TypeScript",
+    category: "Language",
+    icon: <Code2 />,
+    description: "Writing safer, more maintainable JavaScript applications with static typing.",
+  },
+  {
+    title: "React / Next.js",
+    category: "Frontend",
+    icon: <Cpu />,
+    description: "Building modern, responsive interfaces and full-stack web experiences.",
+  },
+  {
+    title: "Node.js / Express",
+    category: "Backend",
+    icon: <Server />,
+    description: "Creating REST APIs, backend services, authentication, and server-side logic.",
+  },
+  {
+  title: "MySQL",
+  category: "Database",
+  icon: <Database />,
+  description:
+    "Designing relational databases, writing optimized queries, and managing structured data efficiently.",
+},
+  {
+    title: "PostgreSQL",
+    category: "Database",
+    icon: <Database />,
+    description: "Designing relational databases, queries, and structured data solutions.",
+  },
+  {
+    title: "MongoDB",
+    category: "Database",
+    icon: <Database />,
+    description: "Working with flexible NoSQL data models for scalable applications.",
+  },
+  {
+    title: "Docker",
+    category: "DevOps",
+    icon: <Cloud />,
+    description: "Containerizing applications and preparing projects for consistent deployment.",
+  },
+  {
+    title: "Git / GitHub",
+    category: "Tools",
+    icon: <Wrench />,
+    description: "Managing version control, collaboration, repositories, and project workflows.",
+  },
+  {
+    title: "Postman",
+    category: "Tools",
+    icon: <Wrench />,
+    description: "Testing APIs, validating endpoints, and improving backend development workflows.",
+  },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-white/5 relative">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+    <section id="skills" className="relative overflow-hidden bg-[#0b0b0f] py-28 text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(168,85,247,0.16),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(59,130,246,0.1),transparent_35%)]" />
+
+      <div className="container-shell relative z-10">
+        <div className="mb-16 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-sm font-medium mb-6"
+            className="mb-6 inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-300"
           >
-            <Cpu size={16} /> My Expertise
+            <Cpu size={16} /> Technical Skills
           </motion.div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Technical <span className="gradient-text">Skills</span></h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            I've spent years honing my craft across various technologies. 
-            Here's a snapshot of my technical arsenal.
+
+          <h2 className="text-4xl font-bold md:text-6xl">
+            Tools & <span className="gradient-text">Technologies</span>
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400">
+            Technologies I use to build backend systems, full-stack applications,
+            APIs, databases, and production-ready software.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {skillCategories.map((category, catIndex) => (
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {skills.map((skill, index) => (
             <motion.div
-              key={catIndex}
-              initial={{ opacity: 0, y: 30 }}
+              key={skill.title}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: catIndex * 0.2 }}
-              className="p-8 glass-card rounded-3xl hover:bg-white/10 transition-colors group"
+              transition={{ delay: index * 0.04, duration: 0.45 }}
+              className="rounded-3xl border border-white/10 bg-white/[0.035] p-8 backdrop-blur-xl transition-colors hover:bg-white/[0.06]"
             >
-              <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 bg-white/5 rounded-2xl group-hover:scale-110 transition-transform">
-                  {category.icon}
-                </div>
-                <h3 className="text-xl font-bold">{category.title}</h3>
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/15 text-purple-300">
+                {skill.icon}
               </div>
 
-              <div className="space-y-6">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-sm font-medium text-gray-300">{skill.name}</span>
-                      <span className="text-sm font-medium text-purple-400">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 bg-white/5 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.5 + skillIndex * 0.1 }}
-                        className="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-purple-300">
+                {skill.category}
+              </p>
+
+              <h3 className="mb-4 text-2xl font-bold">{skill.title}</h3>
+
+              <p className="leading-7 text-gray-400">{skill.description}</p>
             </motion.div>
           ))}
         </div>
