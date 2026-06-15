@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { useMemo, useState } from "react";
+import { motion } from "motion/react";
 import {
   ArrowDown,
   ArrowRight,
@@ -10,25 +10,11 @@ import {
   Code2,
   Download,
   Mail,
-  Menu,
-  Moon,
   Sparkles,
-  Sun,
-  X,
   Zap,
 } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import { cn } from "../lib/utils";
-
-const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
-];
 
 const stats = [
   { value: "2+", label: "Years Experience", icon: BriefcaseBusiness },
@@ -87,8 +73,6 @@ function HeroButton({
 }
 
 export default function HeroSection() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
   const [imageFailed, setImageFailed] = useState(false);
 
   const particleNodes = useMemo(
@@ -116,18 +100,11 @@ export default function HeroSection() {
     [],
   );
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDarkMode);
-  }, [isDarkMode]);
-
   return (
     <section
       id="home"
       className={cn(
-        "relative isolate z-50 flex min-h-screen overflow-hidden px-4 text-white sm:px-6 lg:px-8",
-        isDarkMode
-          ? "bg-[#030014]"
-          : "bg-[radial-gradient(circle_at_top,#eef2ff_0%,#e0f2fe_34%,#f8fafc_72%)] text-slate-950",
+        "relative isolate flex min-h-screen overflow-hidden bg-[#030014] px-4 text-white sm:px-6 lg:px-8",
       )}
     >
       <div className="pointer-events-none absolute inset-0 -z-20">
@@ -152,114 +129,6 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(circle_at_center,black,transparent_78%)]" />
         {particleNodes}
       </div>
-
-      <motion.nav
-        initial={{ opacity: 0, y: -18 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        aria-label="Primary navigation"
-        className="fixed left-0 right-0 top-0 z-[100] pointer-events-auto border-b border-white/10 bg-[#030014]/55 backdrop-blur-2xl"
-      >
-        <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <a href="#home" className="text-sm font-black tracking-wide sm:text-base">
-            <span className="bg-gradient-to-r from-fuchsia-300 via-violet-300 to-sky-300 bg-clip-text text-transparent">
-              ASHIKA
-            </span>{" "}
-            KAMBANG
-          </a>
-
-          <div className="hidden items-center gap-7 lg:flex">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-xs font-semibold text-slate-300 transition hover:text-white"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-
-          <div className="hidden items-center gap-2 md:flex">
-            <a
-              href="https://github.com/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub profile"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-slate-200 transition hover:border-white/25 hover:bg-white/10"
-            >
-              <FaGithub className="h-4 w-4" />
-            </a>
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn profile"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-slate-200 transition hover:border-white/25 hover:bg-white/10"
-            >
-              <FaLinkedin className="h-4 w-4" />
-            </a>
-            <button
-              type="button"
-              aria-label="Toggle theme"
-              onClick={() => setIsDarkMode((current) => !current)}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-slate-200 transition hover:border-white/25 hover:bg-white/10"
-            >
-              {isDarkMode ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
-            </button>
-          </div>
-
-          <button
-            type="button"
-            aria-label="Toggle navigation menu"
-            aria-expanded={isMenuOpen}
-            onClick={() => setIsMenuOpen((current) => !current)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-white md:hidden"
-          >
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
-        </div>
-
-        <AnimatePresence>
-          {isMenuOpen ? (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="border-t border-white/10 bg-[#050117]/95 px-4 py-5 backdrop-blur-xl md:hidden"
-            >
-              <div className="mx-auto flex max-w-7xl flex-col gap-4">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-sm font-semibold text-slate-200"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-                <div className="flex items-center gap-2 border-t border-white/10 pt-4">
-                  <a href="https://github.com/" aria-label="GitHub profile" className="rounded-full border border-white/10 p-2">
-                    <FaGithub className="h-4 w-4" />
-                  </a>
-                  <a href="https://www.linkedin.com/" aria-label="LinkedIn profile" className="rounded-full border border-white/10 p-2">
-                    <FaLinkedin className="h-4 w-4" />
-                  </a>
-                  <button
-                    type="button"
-                    aria-label="Toggle theme"
-                    onClick={() => setIsDarkMode((current) => !current)}
-                    className="rounded-full border border-white/10 p-2"
-                  >
-                    {isDarkMode ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          ) : null}
-        </AnimatePresence>
-      </motion.nav>
 
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center pb-10 pt-24 text-center sm:pt-28">
         <motion.div
