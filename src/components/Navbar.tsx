@@ -37,7 +37,7 @@ export default function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           className="text-2xl font-bold tracking-tighter"
         >
-          <span className="gradient-text">DEV</span>PORT
+          <span className="gradient-text">ASHIKA </span>KAMBANG
         </motion.a>
 
         {/* Desktop Nav */}
