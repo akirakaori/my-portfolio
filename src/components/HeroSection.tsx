@@ -61,7 +61,7 @@ export default function HeroSection() {
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
             <a
               href="#projects"
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-bold text-black transition hover:bg-purple-100"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-6 text-sm font-bold text-white transition hover:bg-white/10"
             >
               View Projects <ArrowRight size={16} />
             </a>
