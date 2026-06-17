@@ -19,6 +19,20 @@ description:
 "Creating REST APIs, backend services, authentication, and server-side logic.",
 },
 {
+title: "C# / ASP.NET Core",
+category: "Backend Technologies",
+icon: <Server />,
+description:
+"Developing secure APIs, web applications, and full-stack systems.",
+},
+{
+title: "Java",
+category: "Backend Technologies",
+icon: <Code2 />,
+description:
+"Building backend logic, object-oriented systems, and enterprise applications.",
+},
+{
 title: "JavaScript",
 category: "Frontend Technologies",
 icon: <Code2 />,
@@ -39,27 +53,8 @@ icon: <Cpu />,
 description:
 "Building modern, responsive interfaces and full-stack web experiences.",
 },
-{
-title: "Python",
-category: "AI & Data",
-icon: <Code2 />,
-description:
-"Working on scripting, data analysis, automation, and AI-powered solutions.",
-},
-{
-title: "C# / ASP.NET Core",
-category: "Backend Technologies",
-icon: <Server />,
-description:
-"Developing secure APIs, web applications, and full-stack systems.",
-},
-{
-title: "Java",
-category: "Backend Technologies",
-icon: <Code2 />,
-description:
-"Building backend logic, object-oriented systems, and enterprise applications.",
-},
+
+
 
 {
 title: "PostgreSQL",
@@ -84,12 +79,20 @@ description:
 },
 
 {
-title: "AI & Data",
+title: "Python",
 category: "AI & Data",
-icon: <Cpu />,
+icon: <Code2 />,
 description:
-"Exploring machine learning fundamentals, recommendation systems, data analytics, intelligent applications, and AI-powered software solutions.",
+"Working on scripting, data analysis, automation, and AI-powered solutions.",
 },
+{
+  title: "AI & Machine Learning",
+  category: "AI & Data",
+  icon: <Cpu />,
+  description:
+    "Currently exploring machine learning, natural language processing, generative AI, recommendation systems, data analytics, and intelligent application development.",
+},
+
 {
 title: "Docker",
 category: "Cloud & Tools",
