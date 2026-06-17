@@ -113,7 +113,7 @@ export default function Navbar() {
             className="flex items-center gap-2"
           >
             <a
-              href="https://github.com/"
+              href="https://github.com/akirakaori"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub profile"
@@ -122,7 +122,7 @@ export default function Navbar() {
               <FaGithub className="h-4 w-4" />
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://linkedin.com/in/ashika-kambang/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn profile"
@@ -173,10 +173,22 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="flex items-center gap-2 border-t border-black/10 pt-4 dark:border-white/10">
-                <a href="https://github.com/" aria-label="GitHub profile" className="rounded-full border border-black/15 p-2 text-black dark:border-white/10 dark:text-white">
+                <a
+                  href="https://github.com/akirakaori"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub profile"
+                  className="rounded-full border border-black/15 p-2 text-black dark:border-white/10 dark:text-white"
+                >
                   <FaGithub className="h-4 w-4" />
                 </a>
-                <a href="https://www.linkedin.com/" aria-label="LinkedIn profile" className="rounded-full border border-black/15 p-2 text-black dark:border-white/10 dark:text-white">
+                <a
+                  href="https://linkedin.com/in/ashika-kambang/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn profile"
+                  className="rounded-full border border-black/15 p-2 text-black dark:border-white/10 dark:text-white"
+                >
                   <FaLinkedin className="h-4 w-4" />
                 </a>
                 <button

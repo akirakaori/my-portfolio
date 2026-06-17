@@ -13,10 +13,10 @@ import {
 } from "react-icons/fa";
 
 const stats = [
-  { value: "10+", label: "Projects Built" },
-  { value: "2+", label: "Years Learning" },
-  { value: "5+", label: "Technologies" },
-  { value: "350+", label: "Hours Coding" },
+  { value: "10+", label: "Projects Developed" },
+  { value: "2+", label: "Years of Development Experience" },
+  { value: "10+", label: "Technologies & Frameworks" },
+  { value: "1+", label: "Industry Experience" },
 ];
 
 const focusAreas = [
@@ -38,7 +38,7 @@ const focusAreas = [
   {
     icon: <FaRocket />,
     title: "AI-Powered Solutions",
-    text: "Exploring intelligent applications, automation, recommendations, and real-world problem solving.",
+    text: "Exploring Artificial Intelligence, Machine Learning, recommendation systems, and intelligent applicationsthat solve real-world problems.",
   },
 ];
 
@@ -79,22 +79,24 @@ export default function About() {
           </p>
 
           <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-            Backend &{" "}
-            <span className="gradient-text">Full-Stack Developer</span>
-          </h2>
+  Software Engineer{" "}
+  <span className="gradient-text">Building Intelligent Applications</span>
+</h2>
 
           <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-[#6E5A48] dark:text-gray-400">
-            I am a Computer Science graduate focused on backend and full-stack
-            software development. I enjoy building scalable web applications,
-            enterprise systems, and AI-powered solutions using ASP.NET Core,
-            Java, React, Node.js, and modern software engineering practices.
-          </p>
+  I am a Software Engineer passionate about designing scalable backend
+  systems, building modern full-stack applications, and developing
+  intelligent software solutions that solve real-world problems.
+</p>
 
-          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6E5A48] dark:text-gray-400">
-            My interests include software architecture, system design, backend
-            engineering, cloud technologies, and creating technology that solves
-            real-world problems.
-          </p>
+<p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6E5A48] dark:text-gray-400">
+  My experience spans enterprise banking systems, healthcare platforms,
+  vehicle management applications, educational systems, career intelligence
+  solutions, and data-driven analytics projects. Alongside software
+  engineering, I am actively expanding my expertise in Artificial
+  Intelligence, Machine Learning, cloud technologies, and software
+  architecture.
+</p>
         </motion.div>
 
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -132,17 +134,17 @@ export default function About() {
             <h3 className="mb-5 text-3xl font-bold">My Journey</h3>
 
             <p className="leading-8 text-[#6E5A48] dark:text-gray-400">
-              My development journey is centered around understanding how
-              systems work behind the scenes. I enjoy working with backend
-              logic, APIs, databases, authentication, and application
-              architecture.
+              My journey has been driven by a curiosity for understanding how modern applications and systems are designed, built, and scaled. I enjoy working with backend services, APIs, databases, authentication systems, and application architecture.
+
+Over time, I have developed projects across banking, healthcare, vehicle management, career intelligence, education, and analytics domains. I am continuously learning and building while expanding my knowledge in Artificial Intelligence, Machine Learning, cloud technologies, and scalable software systems.
             </p>
 
-            <p className="mt-5 leading-8 text-[#6E5A48] dark:text-gray-400">
-              I have built projects across healthcare, vehicle management,
-              career intelligence, cinema operations, education platforms, and
-              data analysis.
-            </p>
+           <p className="mt-5 leading-8 text-[#6E5A48] dark:text-gray-400">
+  I have developed projects across banking, healthcare, vehicle management,
+  career intelligence, education, cinema operations, and data analytics,
+  combining backend, full-stack, and AI-focused ideas to solve practical
+  problems.
+</p>
 
             <div className="mt-8 rounded-2xl border border-[#B7925D]/20 bg-[#F2E8D8]/70 p-5 dark:border-white/10 dark:bg-black/30">
               <p className="text-sm uppercase tracking-[0.25em] text-[#6E5A48] dark:text-purple-300">
