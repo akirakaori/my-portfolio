@@ -1,8 +1,27 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
+  --background: #F7F2E8;
+  --foreground: #3D2C1F;
+  --muted-foreground: #6E5A48;
+  --surface: rgba(255, 255, 255, 0.55);
+  --surface-strong: #F2E8D8;
+  --luxury-border: rgba(183, 146, 93, 0.18);
+  --accent: #B7925D;
+  --accent-hover: #9C7645;
+}
+
+.dark {
   --background: #030014;
   --foreground: #f8fafc;
+  --muted-foreground: #94a3b8;
+  --surface: rgba(15, 23, 42, 0.6);
+  --surface-strong: #0f172a;
+  --luxury-border: rgba(148, 163, 184, 0.18);
+  --accent: #e879f9;
+  --accent-hover: #60a5fa;
 }
 
 @theme inline {
@@ -37,27 +56,49 @@ a {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #e879f9 0%, #60a5fa 100%);
+  background: linear-gradient(135deg, #D4B483 0%, #B7925D 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
+.dark .gradient-text {
+  background: linear-gradient(135deg, #e879f9 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .glass-card {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(183, 146, 93, 0.18);
+  box-shadow: 0 24px 80px rgba(183, 146, 93, 0.16);
+  backdrop-filter: blur(16px);
+}
+
+.dark .glass-card {
   background: rgba(15, 23, 42, 0.6);
   border: 1px solid rgba(148, 163, 184, 0.18);
   box-shadow: 0 24px 80px rgba(15, 23, 42, 0.28);
-  backdrop-filter: blur(16px);
 }
 
 .gradient-border {
   padding: 1px;
+  background: linear-gradient(135deg, rgba(212, 180, 131, 0.85), rgba(183, 146, 93, 0.8));
+}
+
+.dark .gradient-border {
   background: linear-gradient(135deg, rgba(232, 121, 249, 0.8), rgba(96, 165, 250, 0.75));
 }
 
 .gradient-border-content {
   height: 100%;
   width: 100%;
+  background:
+    radial-gradient(circle at top, rgba(212, 180, 131, 0.18), transparent 50%),
+    #F2E8D8;
+}
+
+.dark .gradient-border-content {
   background:
     radial-gradient(circle at top, rgba(96, 165, 250, 0.18), transparent 50%),
     #0f172a;

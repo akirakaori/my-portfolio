@@ -2,6 +2,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Create a `.env.local` file for the contact form:
+
+```bash
+RESEND_API_KEY=your_resend_api_key_here
+CONTACT_EMAIL=ashikakambang@gmail.com
+```
+
 First, run the development server:
 
 ```bash
