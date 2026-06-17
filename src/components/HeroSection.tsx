@@ -49,7 +49,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="mt-7 text-xl font-semibold text-purple-200">
-            Backend & Full-Stack Developer
+            Backend | Full-Stack Developer
           </p>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-400">
