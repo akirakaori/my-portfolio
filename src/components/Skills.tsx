@@ -12,85 +12,107 @@ import {
 
 const skills = [
   {
-    title: "Java",
-    category: "Language",
-    icon: <Code2 />,
-    description: "Building backend logic, object-oriented systems, and enterprise applications.",
-  },
-  {
-    title: "C# / ASP.NET Core",
-    category: "Backend",
-    icon: <Server />,
-    description: "Developing secure APIs, web applications, and full-stack systems.",
-  },
-  {
-    title: "Python",
-    category: "Language",
-    icon: <Code2 />,
-    description: "Working on scripting, data analysis, automation, and AI-powered solutions.",
-  },
-  {
-    title: "JavaScript",
-    category: "Language",
-    icon: <Code2 />,
-    description: "Creating interactive web applications and connecting frontend with backend APIs.",
-  },
-  {
-    title: "TypeScript",
-    category: "Language",
-    icon: <Code2 />,
-    description: "Writing safer, more maintainable JavaScript applications with static typing.",
-  },
-  {
-    title: "React / Next.js",
-    category: "Frontend",
-    icon: <Cpu />,
-    description: "Building modern, responsive interfaces and full-stack web experiences.",
-  },
-  {
-    title: "Node.js / Express",
-    category: "Backend",
-    icon: <Server />,
-    description: "Creating REST APIs, backend services, authentication, and server-side logic.",
-  },
-  {
-  title: "MySQL",
-  category: "Database",
-  icon: <Database />,
-  description:
-    "Designing relational databases, writing optimized queries, and managing structured data efficiently.",
+title: "Node.js / Express",
+category: "Backend Technologies",
+icon: <Server />,
+description:
+"Creating REST APIs, backend services, authentication, and server-side logic.",
 },
-  {
-    title: "PostgreSQL",
-    category: "Database",
-    icon: <Database />,
-    description: "Designing relational databases, queries, and structured data solutions.",
-  },
-  {
-    title: "MongoDB",
-    category: "Database",
-    icon: <Database />,
-    description: "Working with flexible NoSQL data models for scalable applications.",
-  },
-  {
-    title: "Docker",
-    category: "DevOps",
-    icon: <Cloud />,
-    description: "Containerizing applications and preparing projects for consistent deployment.",
-  },
-  {
-    title: "Git / GitHub",
-    category: "Tools",
-    icon: <Wrench />,
-    description: "Managing version control, collaboration, repositories, and project workflows.",
-  },
-  {
-    title: "Postman",
-    category: "Tools",
-    icon: <Wrench />,
-    description: "Testing APIs, validating endpoints, and improving backend development workflows.",
-  },
+{
+title: "JavaScript",
+category: "Frontend Technologies",
+icon: <Code2 />,
+description:
+"Creating interactive web applications and connecting frontend with backend APIs.",
+},
+{
+title: "TypeScript",
+category: "Frontend Technologies",
+icon: <Code2 />,
+description:
+"Writing safer, more maintainable JavaScript applications with static typing.",
+},
+{
+title: "React / Next.js",
+category: "Frontend Technologies",
+icon: <Cpu />,
+description:
+"Building modern, responsive interfaces and full-stack web experiences.",
+},
+{
+title: "Python",
+category: "AI & Data",
+icon: <Code2 />,
+description:
+"Working on scripting, data analysis, automation, and AI-powered solutions.",
+},
+{
+title: "C# / ASP.NET Core",
+category: "Backend Technologies",
+icon: <Server />,
+description:
+"Developing secure APIs, web applications, and full-stack systems.",
+},
+{
+title: "Java",
+category: "Backend Technologies",
+icon: <Code2 />,
+description:
+"Building backend logic, object-oriented systems, and enterprise applications.",
+},
+
+{
+title: "PostgreSQL",
+category: "Databases",
+icon: <Database />,
+description:
+"Designing relational databases, queries, and structured data solutions.",
+},
+{
+title: "MySQL",
+category: "Databases",
+icon: <Database />,
+description:
+"Designing relational databases, writing optimized queries, and managing structured data efficiently.",
+},
+{
+title: "MongoDB",
+category: "Databases",
+icon: <Database />,
+description:
+"Working with flexible NoSQL data models for scalable applications.",
+},
+
+{
+title: "AI & Data",
+category: "AI & Data",
+icon: <Cpu />,
+description:
+"Exploring machine learning fundamentals, recommendation systems, data analytics, intelligent applications, and AI-powered software solutions.",
+},
+{
+title: "Docker",
+category: "Cloud & Tools",
+icon: <Cloud />,
+description:
+"Containerizing applications and preparing projects for consistent deployment.",
+},
+{
+title: "Git / GitHub",
+category: "Cloud & Tools",
+icon: <Wrench />,
+description:
+"Managing version control, collaboration, repositories, and project workflows.",
+},
+{
+title: "Postman",
+category: "Cloud & Tools",
+icon: <Wrench />,
+description:
+"Testing APIs, validating endpoints, and improving backend development workflows.",
+},
 ];
+
 
 export default function Skills() {
   return (

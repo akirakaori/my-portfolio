@@ -49,13 +49,13 @@ export default function HeroSection() {
           </h1>
 
           <p className="mt-7 text-xl font-semibold text-[#6E5A48] dark:text-purple-200">
-            Backend | Full-Stack Developer
+            Software Engineer | Backend, Full-Stack & AI Applications
           </p>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-[#6E5A48] dark:text-gray-400">
-            I build secure backend systems, full-stack applications, APIs, and
-            real-world software solutions using ASP.NET Core, Java, React,
-            Node.js, PostgreSQL, and modern engineering practices.
+           I build scalable software systems, modern web applications, intelligent platforms, and secure backend services using React, Node.js, Python, ASP.NET Core, Java, PostgreSQL, and cloud technologies.
+
+Passionate about software architecture, system design, backend engineering, and applying Artificial Intelligence to solve real-world problems.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -131,7 +131,7 @@ export default function HeroSection() {
               Focus
             </p>
             <p className="mt-1 text-sm font-bold text-[#3D2C1F] dark:text-white">
-              Backend Systems
+              Software Engineering
             </p>
           </div>
 
@@ -142,13 +142,13 @@ export default function HeroSection() {
             <p className="text-[10px] uppercase tracking-[0.25em] text-[#6E5A48] dark:text-purple-300">
               Building
             </p>
-            <p className="mt-1 text-sm font-bold text-[#3D2C1F] dark:text-white">Real Projects</p>
+            <p className="mt-1 text-sm font-bold text-[#3D2C1F] dark:text-white">Backend Systems</p>
           </div>
 
           <div className="absolute left-1/2 top-[-22px] -translate-x-1/2 rounded-2xl border border-[#B7925D]/20 bg-white/70 px-5 py-3 backdrop-blur-xl dark:border-white/10 dark:bg-black/60">
             <div className="flex items-center gap-2 text-sm font-bold text-[#3D2C1F] dark:text-white">
               <Code2 size={16} className="text-[#6E5A48] dark:text-purple-300" />
-              Full-Stack Developer
+              AI Applications
             </div>
           </div>
         </motion.div>

@@ -9,8 +9,9 @@ const projects = [
     title: "Lakshya",
     subtitle: "AI Career Intelligence Platform",
     description:
-      "AI-powered career intelligence platform with resume parsing, job matching, recruiter workflows, intelligent recommendations, and real-time notifications.",
-    tags: ["AI", "React", "Node.js", "Career Tech", "Recommendations"],
+      "AI-powered career intelligence platform designed to help students and professionals make informed career decisions through resume analysis, intelligent job matching, personalized recommendations, recruiter workflows, and real-time notifications.",
+      
+      tags: ["AI", "React", "Node.js", "Career Intelligence","Resume Analysis", "Recommendation Engine"],
     github: "https://github.com/akirakaori/Lakshya",
     demo: "#",
     featured: true,
@@ -110,7 +111,7 @@ export default function Projects() {
                 <div className="mb-8 flex items-center justify-between gap-4">
                   <span className="inline-flex items-center gap-2 rounded-full border border-[#B7925D]/25 bg-[#B7925D]/10 px-4 py-2 text-sm font-semibold text-[#6E5A48] dark:border-purple-400/25 dark:bg-purple-500/10 dark:text-purple-200">
                     <Sparkles size={15} />
-                    Featured Project
+                    {project.title === "Lakshya" ? "Featured AI Project" : "Featured Project"}
                   </span>
 
                   <span className="text-sm text-[#6E5A48] dark:text-gray-500">
@@ -129,6 +130,7 @@ export default function Projects() {
                 <p className="mb-8 leading-8 text-[#6E5A48] dark:text-gray-400">
                   {project.description}
                 </p>
+                
 
                 <div className="mb-8 flex flex-wrap gap-3">
                   {project.tags.map((tag) => (
@@ -149,7 +151,7 @@ export default function Projects() {
                     className="inline-flex items-center gap-2 rounded-full border border-[#B7925D]/25 px-5 py-3 text-sm font-semibold text-[#3D2C1F] transition hover:bg-[#F2E8D8] dark:border-white/15 dark:text-white dark:hover:bg-white/10"
                   >
                     <FaGithub size={18} />
-                    GitHub
+                    View Project 
                   </a>
 
                   {project.demo !== "#" && (
@@ -212,7 +214,7 @@ export default function Projects() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-[#6E5A48] transition hover:text-[#3D2C1F] dark:text-purple-300 dark:hover:text-purple-200"
               >
-                View Repository <ExternalLink size={15} />
+                View Project <ExternalLink size={15} />
               </a>
             </motion.article>
           ))}
