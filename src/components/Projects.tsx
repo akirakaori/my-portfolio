@@ -67,9 +67,9 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-[#0b0b0f] py-28 text-white"
+      className="relative overflow-hidden bg-[#F7F2E8] py-28 text-[#3D2C1F] dark:bg-[#0b0b0f] dark:text-white"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(168,85,247,0.16),transparent_32%),radial-gradient(circle_at_80%_75%,rgba(59,130,246,0.1),transparent_35%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(212,180,131,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(184,146,93,0.15),transparent_40%)] dark:bg-[radial-gradient(circle_at_20%_10%,rgba(168,85,247,0.16),transparent_32%),radial-gradient(circle_at_80%_75%,rgba(59,130,246,0.1),transparent_35%)]" />
 
       <div className="container-shell relative z-10">
         <div className="mb-16 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
@@ -78,7 +78,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-300"
+              className="mb-6 inline-flex items-center gap-2 rounded-full bg-[#B7925D]/10 px-4 py-2 text-sm font-medium text-[#6E5A48] dark:bg-purple-500/10 dark:text-purple-300"
             >
               <FolderOpen size={16} /> Portfolio
             </motion.div>
@@ -88,7 +88,7 @@ export default function Projects() {
             </h2>
           </div>
 
-          <p className="max-w-xl text-lg leading-8 text-gray-400">
+          <p className="max-w-xl text-lg leading-8 text-[#6E5A48] dark:text-gray-400">
             A curated selection of backend, full-stack, enterprise, and
             AI-powered applications built across real-world domains.
           </p>
@@ -102,31 +102,31 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl transition hover:bg-white/[0.07]"
+              className="group relative overflow-hidden rounded-[2rem] border border-[#B7925D]/20 bg-white/55 p-8 backdrop-blur-xl transition hover:bg-[#F2E8D8]/70 dark:border-white/10 dark:bg-white/[0.04] dark:hover:bg-white/[0.07]"
             >
-              <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-purple-500/20 blur-3xl transition group-hover:bg-purple-500/30" />
+              <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-[#B7925D]/20 blur-3xl transition group-hover:bg-[#B7925D]/30 dark:bg-purple-500/20 dark:group-hover:bg-purple-500/30" />
 
               <div className="relative z-10">
                 <div className="mb-8 flex items-center justify-between gap-4">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-purple-400/25 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[#B7925D]/25 bg-[#B7925D]/10 px-4 py-2 text-sm font-semibold text-[#6E5A48] dark:border-purple-400/25 dark:bg-purple-500/10 dark:text-purple-200">
                     <Sparkles size={15} />
                     Featured Project
                   </span>
 
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-[#6E5A48] dark:text-gray-500">
                     0{index + 1}
                   </span>
                 </div>
 
-                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-purple-300">
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#6E5A48] dark:text-purple-300">
                   {project.subtitle}
                 </p>
 
-                <h3 className="mb-5 text-3xl font-bold transition group-hover:text-purple-300">
+                <h3 className="mb-5 text-3xl font-bold transition group-hover:text-[#6E5A48] dark:group-hover:text-purple-300">
                   {project.title}
                 </h3>
 
-                <p className="mb-8 leading-8 text-gray-400">
+                <p className="mb-8 leading-8 text-[#6E5A48] dark:text-gray-400">
                   {project.description}
                 </p>
 
@@ -134,7 +134,7 @@ export default function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-xl border border-white/10 bg-black/30 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-gray-300"
+                      className="rounded-xl border border-[#B7925D]/20 bg-[#F2E8D8]/70 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#6E5A48] dark:border-white/10 dark:bg-black/30 dark:text-gray-300"
                     >
                       {tag}
                     </span>
@@ -146,7 +146,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                    className="inline-flex items-center gap-2 rounded-full border border-[#B7925D]/25 px-5 py-3 text-sm font-semibold text-[#3D2C1F] transition hover:bg-[#F2E8D8] dark:border-white/15 dark:text-white dark:hover:bg-white/10"
                   >
                     <FaGithub size={18} />
                     GitHub
@@ -157,7 +157,7 @@ export default function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:scale-105"
+                      className="inline-flex items-center gap-2 rounded-full bg-[#3D2C1F] px-5 py-3 text-sm font-semibold text-white transition hover:scale-105 dark:bg-white dark:text-black"
                     >
                       <ExternalLink size={18} />
                       Live Demo
@@ -177,21 +177,21 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.08, duration: 0.45 }}
-              className="group rounded-3xl border border-white/10 bg-white/[0.035] p-6 backdrop-blur-xl transition hover:bg-white/[0.07]"
+              className="group rounded-3xl border border-[#B7925D]/20 bg-white/55 p-6 backdrop-blur-xl transition hover:bg-[#F2E8D8]/70 dark:border-white/10 dark:bg-white/[0.035] dark:hover:bg-white/[0.07]"
             >
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-500/15 text-purple-300">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#B7925D]/15 text-[#6E5A48] dark:bg-purple-500/15 dark:text-purple-300">
                 <FolderOpen size={22} />
               </div>
 
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-purple-300">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#6E5A48] dark:text-purple-300">
                 {project.subtitle}
               </p>
 
-              <h3 className="mb-4 text-xl font-bold transition group-hover:text-purple-300">
+              <h3 className="mb-4 text-xl font-bold transition group-hover:text-[#6E5A48] dark:group-hover:text-purple-300">
                 {project.title}
               </h3>
 
-              <p className="mb-6 min-h-[112px] text-sm leading-7 text-gray-400">
+              <p className="mb-6 min-h-[112px] text-sm leading-7 text-[#6E5A48] dark:text-gray-400">
                 {project.description}
               </p>
 
@@ -199,7 +199,7 @@ export default function Projects() {
                 {project.tags.slice(0, 4).map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-lg border border-white/10 bg-black/30 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-gray-400"
+                    className="rounded-lg border border-[#B7925D]/20 bg-[#F2E8D8]/70 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[#6E5A48] dark:border-white/10 dark:bg-black/30 dark:text-gray-400"
                   >
                     {tag}
                   </span>
@@ -210,7 +210,7 @@ export default function Projects() {
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-purple-300 transition hover:text-purple-200"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#6E5A48] transition hover:text-[#3D2C1F] dark:text-purple-300 dark:hover:text-purple-200"
               >
                 View Repository <ExternalLink size={15} />
               </a>
@@ -228,7 +228,7 @@ export default function Projects() {
             href="https://github.com/akirakaori"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 rounded-full border border-white/15 px-8 py-4 font-bold text-white transition hover:bg-white/10"
+            className="inline-flex items-center gap-3 rounded-full border border-[#B7925D]/25 px-8 py-4 font-bold text-[#3D2C1F] transition hover:bg-[#F2E8D8] dark:border-white/15 dark:text-white dark:hover:bg-white/10"
           >
             <FaGithub size={20} />
             View All Projects

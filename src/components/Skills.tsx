@@ -94,8 +94,8 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative overflow-hidden bg-[#0b0b0f] py-28 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(168,85,247,0.16),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(59,130,246,0.1),transparent_35%)]" />
+    <section id="skills" className="relative overflow-hidden bg-[#F2E8D8] py-28 text-[#3D2C1F] dark:bg-[#0b0b0f] dark:text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(212,180,131,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(184,146,93,0.15),transparent_40%)] dark:bg-[radial-gradient(circle_at_20%_10%,rgba(168,85,247,0.16),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(59,130,246,0.1),transparent_35%)]" />
 
       <div className="container-shell relative z-10">
         <div className="mb-16 text-center">
@@ -103,7 +103,7 @@ export default function Skills() {
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-300"
+            className="mb-6 inline-flex items-center gap-2 rounded-full bg-[#B7925D]/10 px-4 py-2 text-sm font-medium text-[#6E5A48] dark:bg-purple-500/10 dark:text-purple-300"
           >
             <Cpu size={16} /> Technical Skills
           </motion.div>
@@ -112,7 +112,7 @@ export default function Skills() {
             Tools & <span className="gradient-text">Technologies</span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#6E5A48] dark:text-gray-400">
             Technologies I use to build backend systems, full-stack applications,
             APIs, databases, and production-ready software.
           </p>
@@ -126,19 +126,19 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.04, duration: 0.45 }}
-              className="rounded-3xl border border-white/10 bg-white/[0.035] p-8 backdrop-blur-xl transition-colors hover:bg-white/[0.06]"
+              className="rounded-3xl border border-[#B7925D]/20 bg-white/55 p-8 backdrop-blur-xl transition-colors hover:bg-[#F7F2E8]/75 dark:border-white/10 dark:bg-white/[0.035] dark:hover:bg-white/[0.06]"
             >
-              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/15 text-purple-300">
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#B7925D]/15 text-[#6E5A48] dark:bg-purple-500/15 dark:text-purple-300">
                 {skill.icon}
               </div>
 
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-purple-300">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-[#6E5A48] dark:text-purple-300">
                 {skill.category}
               </p>
 
               <h3 className="mb-4 text-2xl font-bold">{skill.title}</h3>
 
-              <p className="leading-7 text-gray-400">{skill.description}</p>
+              <p className="leading-7 text-[#6E5A48] dark:text-gray-400">{skill.description}</p>
             </motion.div>
           ))}
         </div>

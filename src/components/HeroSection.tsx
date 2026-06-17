@@ -22,12 +22,12 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden bg-[#050014] px-6 pt-36 pb-20 text-white"
+      className="relative min-h-screen overflow-hidden bg-[#F7F2E8] px-6 pt-36 pb-20 text-[#3D2C1F] dark:bg-[#050014] dark:text-white"
     >
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[-12%] top-20 h-96 w-96 rounded-full bg-purple-600/25 blur-[130px]" />
-        <div className="absolute right-[-10%] bottom-10 h-[30rem] w-[30rem] rounded-full bg-blue-600/20 blur-[130px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:80px_80px] opacity-60" />
+        <div className="absolute left-[-12%] top-20 h-96 w-96 rounded-full bg-[#D4B483]/25 blur-[130px] dark:bg-purple-600/25" />
+        <div className="absolute right-[-10%] bottom-10 h-[30rem] w-[30rem] rounded-full bg-[#B7925D]/20 blur-[130px] dark:bg-blue-600/20" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(183,146,93,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(183,146,93,0.08)_1px,transparent_1px)] bg-[size:80px_80px] opacity-50 dark:bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] dark:opacity-60" />
       </div>
 
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1fr_0.85fr]">
@@ -36,8 +36,8 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-xs font-semibold text-purple-100 backdrop-blur-xl">
-            <Sparkles size={14} className="text-purple-300" />
+          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#B7925D]/20 bg-white/55 px-4 py-2 text-xs font-semibold text-[#6E5A48] backdrop-blur-xl dark:border-white/15 dark:bg-white/[0.06] dark:text-purple-100">
+            <Sparkles size={14} className="text-[#6E5A48] dark:text-purple-300" />
             Available for internships & graduate opportunities
           </div>
 
@@ -48,11 +48,11 @@ export default function HeroSection() {
             Software Solutions
           </h1>
 
-          <p className="mt-7 text-xl font-semibold text-purple-200">
+          <p className="mt-7 text-xl font-semibold text-[#6E5A48] dark:text-purple-200">
             Backend | Full-Stack Developer
           </p>
 
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-400">
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-[#6E5A48] dark:text-gray-400">
             I build secure backend systems, full-stack applications, APIs, and
             real-world software solutions using ASP.NET Core, Java, React,
             Node.js, PostgreSQL, and modern engineering practices.
@@ -61,39 +61,40 @@ export default function HeroSection() {
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
             <a
               href="#projects"
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-6 text-sm font-bold text-white transition hover:bg-white/10"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-[#B7925D]/20 bg-white/55 px-6 text-sm font-bold text-[#3D2C1F] transition hover:bg-[#F2E8D8] dark:border-white/15 dark:bg-white/[0.06] dark:text-white dark:hover:bg-white/10"
             >
               View Projects <ArrowRight size={16} />
             </a>
 
             <a
               href="/cv/Ashika-Kambang-Resume.pdf"
-              download
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-6 text-sm font-bold text-white transition hover:bg-white/10"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#D4B483] to-[#B7925D] px-6 text-sm font-bold text-[#3D2C1F] shadow-[0_0_30px_rgba(183,146,93,0.28)] transition hover:from-[#B7925D] hover:to-[#9C7645] hover:text-white active:scale-[0.98] dark:from-purple-600 dark:to-blue-600 dark:text-white dark:shadow-[0_0_30px_rgba(124,58,237,0.35)] dark:hover:opacity-90"
             >
-              Download CV <Download size={16} />
+              Download Resume <Download size={16} />
             </a>
 
             <a
               href="#contact"
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-6 text-sm font-bold text-white transition hover:bg-white/10"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-[#B7925D]/20 bg-white/55 px-6 text-sm font-bold text-[#3D2C1F] transition hover:bg-[#F2E8D8] dark:border-white/15 dark:bg-white/[0.06] dark:text-white dark:hover:bg-white/10"
             >
               Contact Me <Mail size={16} />
             </a>
           </div>
 
-          <div className="mt-12 grid max-w-xl grid-cols-3 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl">
+          <div className="mt-12 grid max-w-xl grid-cols-3 overflow-hidden rounded-3xl border border-[#B7925D]/20 bg-white/55 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04]">
             {stats.map((stat, index) => (
               <div
                 key={stat.label}
                 className={`p-5 text-center ${
-                  index !== 0 ? "border-l border-white/10" : ""
+                  index !== 0 ? "border-l border-[#B7925D]/20 dark:border-white/10" : ""
                 }`}
               >
                 <div className="gradient-text text-3xl font-black">
                   {stat.value}
                 </div>
-                <p className="mt-1 text-xs text-gray-400">{stat.label}</p>
+                <p className="mt-1 text-xs text-[#6E5A48] dark:text-gray-400">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -105,10 +106,10 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
           className="relative mx-auto w-full max-w-[420px]"
         >
-          <div className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-purple-500/30 via-violet-500/10 to-blue-500/20 blur-3xl" />
+          <div className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-[#D4B483]/35 via-[#B7925D]/15 to-[#F2E8D8]/25 blur-3xl dark:from-purple-500/30 dark:via-violet-500/10 dark:to-blue-500/20" />
 
-          <div className="relative rounded-[2.5rem] border border-white/10 bg-white/[0.05] p-3 shadow-2xl backdrop-blur-xl">
-            <div className="relative h-[480px] overflow-hidden rounded-[2rem] bg-gradient-to-br from-purple-950 to-slate-950">
+          <div className="relative rounded-[2.5rem] border border-[#B7925D]/20 bg-white/55 p-3 shadow-2xl backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.05]">
+            <div className="relative h-[480px] overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#F2E8D8] to-[#B7925D]/30 dark:from-purple-950 dark:to-slate-950">
               <Image
                 src="/profile.jpg"
                 alt="Ashika Kambang"
@@ -118,35 +119,35 @@ export default function HeroSection() {
                 className="object-cover"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050014]/45 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#3D2C1F]/20 via-transparent to-transparent dark:from-[#050014]/45" />
             </div>
           </div>
 
-          <div className="absolute -left-6 top-16 rounded-2xl border border-white/10 bg-black/60 p-4 backdrop-blur-xl">
-            <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-xl bg-purple-500/15 text-purple-300">
+          <div className="absolute -left-6 top-16 rounded-2xl border border-[#B7925D]/20 bg-white/70 p-4 backdrop-blur-xl dark:border-white/10 dark:bg-black/60">
+            <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-xl bg-[#B7925D]/15 text-[#6E5A48] dark:bg-purple-500/15 dark:text-purple-300">
               <Server size={18} />
             </div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-purple-300">
+            <p className="text-[10px] uppercase tracking-[0.25em] text-[#6E5A48] dark:text-purple-300">
               Focus
             </p>
-            <p className="mt-1 text-sm font-bold text-white">
+            <p className="mt-1 text-sm font-bold text-[#3D2C1F] dark:text-white">
               Backend Systems
             </p>
           </div>
 
-          <div className="absolute -right-5 bottom-24 rounded-2xl border border-white/10 bg-black/60 p-4 backdrop-blur-xl">
-            <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-xl bg-blue-500/15 text-blue-300">
+          <div className="absolute -right-5 bottom-24 rounded-2xl border border-[#B7925D]/20 bg-white/70 p-4 backdrop-blur-xl dark:border-white/10 dark:bg-black/60">
+            <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-xl bg-[#B7925D]/15 text-[#6E5A48] dark:bg-blue-500/15 dark:text-blue-300">
               <Database size={18} />
             </div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-purple-300">
+            <p className="text-[10px] uppercase tracking-[0.25em] text-[#6E5A48] dark:text-purple-300">
               Building
             </p>
-            <p className="mt-1 text-sm font-bold text-white">Real Projects</p>
+            <p className="mt-1 text-sm font-bold text-[#3D2C1F] dark:text-white">Real Projects</p>
           </div>
 
-          <div className="absolute left-1/2 top-[-22px] -translate-x-1/2 rounded-2xl border border-white/10 bg-black/60 px-5 py-3 backdrop-blur-xl">
-            <div className="flex items-center gap-2 text-sm font-bold text-white">
-              <Code2 size={16} className="text-purple-300" />
+          <div className="absolute left-1/2 top-[-22px] -translate-x-1/2 rounded-2xl border border-[#B7925D]/20 bg-white/70 px-5 py-3 backdrop-blur-xl dark:border-white/10 dark:bg-black/60">
+            <div className="flex items-center gap-2 text-sm font-bold text-[#3D2C1F] dark:text-white">
+              <Code2 size={16} className="text-[#6E5A48] dark:text-purple-300" />
               Full-Stack Developer
             </div>
           </div>

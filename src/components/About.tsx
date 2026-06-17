@@ -61,10 +61,10 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-[#0b0b0f] py-28 text-white"
+      className="relative overflow-hidden bg-[#F7F2E8] py-28 text-[#3D2C1F] dark:bg-[#0b0b0f] dark:text-white"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(168,85,247,0.18),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(59,130,246,0.12),transparent_35%)]" />
-      <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(120deg,transparent_0%,transparent_45%,white_46%,white_47%,transparent_48%,transparent_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(212,180,131,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(184,146,93,0.15),transparent_40%)] dark:bg-[radial-gradient(circle_at_20%_10%,rgba(168,85,247,0.18),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(59,130,246,0.12),transparent_35%)]" />
+      <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(120deg,transparent_0%,transparent_45%,#B7925D_46%,#B7925D_47%,transparent_48%,transparent_100%)] dark:opacity-[0.04] dark:bg-[linear-gradient(120deg,transparent_0%,transparent_45%,white_46%,white_47%,transparent_48%,transparent_100%)]" />
 
       <div className="container-shell relative z-10">
         <motion.div
@@ -74,7 +74,7 @@ export default function About() {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-4xl text-center"
         >
-          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-purple-300">
+          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-[#6E5A48] dark:text-purple-300">
             About Me
           </p>
 
@@ -83,14 +83,14 @@ export default function About() {
             <span className="gradient-text">Full-Stack Developer</span>
           </h2>
 
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-400">
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-[#6E5A48] dark:text-gray-400">
             I am a Computer Science graduate focused on backend and full-stack
             software development. I enjoy building scalable web applications,
             enterprise systems, and AI-powered solutions using ASP.NET Core,
             Java, React, Node.js, and modern software engineering practices.
           </p>
 
-          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-gray-400">
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#6E5A48] dark:text-gray-400">
             My interests include software architecture, system design, backend
             engineering, cloud technologies, and creating technology that solves
             real-world problems.
@@ -105,12 +105,12 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.08, duration: 0.5 }}
-              className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 text-center backdrop-blur-xl transition hover:-translate-y-1 hover:bg-white/[0.07]"
+              className="rounded-3xl border border-[#B7925D]/20 bg-white/55 p-6 text-center backdrop-blur-xl transition hover:-translate-y-1 hover:bg-[#F2E8D8]/70 dark:border-white/10 dark:bg-white/[0.04] dark:hover:bg-white/[0.07]"
             >
               <div className="gradient-text text-4xl font-bold">
                 {item.value}
               </div>
-              <p className="mt-2 text-xs uppercase tracking-widest text-gray-500">
+              <p className="mt-2 text-xs uppercase tracking-widest text-[#6E5A48] dark:text-gray-500">
                 {item.label}
               </p>
             </motion.div>
@@ -123,43 +123,43 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl"
+            className="rounded-[2rem] border border-[#B7925D]/20 bg-white/55 p-8 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04]"
           >
-            <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/15 text-2xl text-purple-300">
+            <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#B7925D]/15 text-2xl text-[#6E5A48] dark:bg-purple-500/15 dark:text-purple-300">
               <FaGraduationCap />
             </div>
 
             <h3 className="mb-5 text-3xl font-bold">My Journey</h3>
 
-            <p className="leading-8 text-gray-400">
+            <p className="leading-8 text-[#6E5A48] dark:text-gray-400">
               My development journey is centered around understanding how
               systems work behind the scenes. I enjoy working with backend
               logic, APIs, databases, authentication, and application
               architecture.
             </p>
 
-            <p className="mt-5 leading-8 text-gray-400">
+            <p className="mt-5 leading-8 text-[#6E5A48] dark:text-gray-400">
               I have built projects across healthcare, vehicle management,
               career intelligence, cinema operations, education platforms, and
               data analysis.
             </p>
 
-            <div className="mt-8 rounded-2xl border border-white/10 bg-black/30 p-5">
-              <p className="text-sm uppercase tracking-[0.25em] text-purple-300">
+            <div className="mt-8 rounded-2xl border border-[#B7925D]/20 bg-[#F2E8D8]/70 p-5 dark:border-white/10 dark:bg-black/30">
+              <p className="text-sm uppercase tracking-[0.25em] text-[#6E5A48] dark:text-purple-300">
                 Current Focus
               </p>
-              <p className="mt-3 leading-7 text-gray-300">
+              <p className="mt-3 leading-7 text-[#3D2C1F] dark:text-gray-300">
                 Building production-ready applications, strengthening backend
                 engineering skills, and exploring AI-powered solutions.
               </p>
             </div>
 
-            <div className="mt-5 rounded-2xl border border-white/10 bg-black/30 p-5">
-              <p className="text-sm uppercase tracking-[0.25em] text-purple-300">
+            <div className="mt-5 rounded-2xl border border-[#B7925D]/20 bg-[#F2E8D8]/70 p-5 dark:border-white/10 dark:bg-black/30">
+              <p className="text-sm uppercase tracking-[0.25em] text-[#6E5A48] dark:text-purple-300">
                 Beyond Coding
               </p>
 
-              <p className="mt-3 leading-7 text-gray-300">
+              <p className="mt-3 leading-7 text-[#3D2C1F] dark:text-gray-300">
                 Outside of development, I enjoy creative and expressive moments
                 through music, movement, and discovering beautiful food spots.
               </p>
@@ -168,9 +168,9 @@ export default function About() {
                 {hobbies.map((item) => (
                   <span
                     key={item.title}
-                    className="inline-flex items-center gap-2 rounded-xl border border-purple-400/25 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-200"
+                    className="inline-flex items-center gap-2 rounded-xl border border-[#B7925D]/25 bg-[#B7925D]/10 px-4 py-2 text-sm font-medium text-[#6E5A48] dark:border-purple-400/25 dark:bg-purple-500/10 dark:text-purple-200"
                   >
-                    <span className="text-purple-300">{item.icon}</span>
+                    <span className="text-[#6E5A48] dark:text-purple-300">{item.icon}</span>
                     {item.title}
                   </span>
                 ))}
@@ -188,13 +188,13 @@ export default function About() {
             {focusAreas.map((item) => (
               <div
                 key={item.title}
-                className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl transition hover:-translate-y-2 hover:bg-white/[0.07]"
+                className="rounded-3xl border border-[#B7925D]/20 bg-white/55 p-6 backdrop-blur-xl transition hover:-translate-y-2 hover:bg-[#F2E8D8]/70 dark:border-white/10 dark:bg-white/[0.04] dark:hover:bg-white/[0.07]"
               >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-500/15 text-xl text-purple-300">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#B7925D]/15 text-xl text-[#6E5A48] dark:bg-purple-500/15 dark:text-purple-300">
                   {item.icon}
                 </div>
                 <h4 className="mb-3 text-xl font-bold">{item.title}</h4>
-                <p className="leading-relaxed text-gray-400">{item.text}</p>
+                <p className="leading-relaxed text-[#6E5A48] dark:text-gray-400">{item.text}</p>
               </div>
             ))}
           </motion.div>
