@@ -53,12 +53,7 @@ return ( <footer className="border-t border-white/10 py-10 relative z-10"> <div 
 
       {/* Copyright */}
       <div className="text-gray-500 text-sm flex items-center gap-1">
-        Made with{" "}
-        <Heart
-          size={14}
-          className="text-red-500 fill-red-500"
-        />{" "}
-        by Ashika Kambang © {new Date().getFullYear()}
+        Made by Ashika Kambang © {new Date().getFullYear()}
       </div>
 
     </div>
