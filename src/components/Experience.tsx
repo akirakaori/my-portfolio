@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import {
   BriefcaseBusiness,
@@ -33,6 +34,7 @@ const experiences = [
   {
     type: "Internship",
     icon: <BriefcaseBusiness size={22} />,
+    logo: "/infobrain-logo.png",
     title: "Full Stack Developer Intern",
     organization: "Info Brain Technologies",
     link: "https://www.infobraintechs.com/index.html",
@@ -130,8 +132,24 @@ export default function Experience() {
                 transition={{ delay: index * 0.12, duration: 0.55 }}
                 className="relative md:pl-16"
               >
-                <div className="absolute left-0 top-8 hidden h-11 w-11 items-center justify-center rounded-full border border-[#B7925D]/40 bg-[#F7F2E8] text-[#6E5A48] shadow-[0_0_25px_rgba(183,146,93,0.28)] md:flex dark:border-purple-400/40 dark:bg-[#111827] dark:text-purple-300 dark:shadow-[0_0_25px_rgba(168,85,247,0.35)]">
-                  {item.icon}
+                <div
+                  className={`absolute left-0 top-8 hidden h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-[#B7925D]/40 text-[#6E5A48] shadow-[0_0_25px_rgba(183,146,93,0.28)] md:flex dark:border-purple-400/40 dark:text-purple-300 dark:shadow-[0_0_25px_rgba(168,85,247,0.35)] ${
+                    item.logo
+                      ? "bg-white dark:bg-[#111827]"
+                      : "bg-[#F7F2E8] dark:bg-[#111827]"
+                  }`}
+                >
+                  {item.logo ? (
+                    <Image
+                      src={item.logo}
+                      alt={`${item.organization} logo`}
+                      width={44}
+                      height={44}
+                      className="h-full w-full rounded-full object-contain p-1"
+                    />
+                  ) : (
+                    item.icon
+                  )}
                 </div>
 
                 <div className="rounded-[2rem] border border-[#B7925D]/20 bg-white/55 p-7 backdrop-blur-xl transition hover:bg-[#F7F2E8]/75 md:p-8 dark:border-white/10 dark:bg-white/[0.04] dark:hover:bg-white/[0.07]">
