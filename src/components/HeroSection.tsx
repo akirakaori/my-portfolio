@@ -38,7 +38,7 @@ export default function HeroSection() {
         >
           <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#B7925D]/20 bg-white/55 px-4 py-2 text-xs font-semibold text-[#6E5A48] backdrop-blur-xl dark:border-white/15 dark:bg-white/[0.06] dark:text-purple-100">
             <Sparkles size={14} className="text-[#6E5A48] dark:text-purple-300" />
-            Available for internships & graduate opportunities
+            Open to Junior Roles & Internship Opportunities
           </div>
 
           <h1 className="max-w-4xl text-5xl font-black leading-[1.02] tracking-tight md:text-6xl xl:text-7xl">
