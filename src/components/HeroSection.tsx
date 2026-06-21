@@ -49,7 +49,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="mt-7 text-xl font-semibold text-[#6E5A48] dark:text-purple-200">
-            Software Engineer | Backend, Full-Stack & AI Applications
+            Backend & Full-Stack Developer | AI & Machine Learning | AI-Powered Applications
           </p>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-[#6E5A48] dark:text-gray-400">
