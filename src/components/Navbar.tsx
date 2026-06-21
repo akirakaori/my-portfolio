@@ -21,17 +21,13 @@ function getPreferredDarkMode() {
     return true;
   }
 
-  if (savedTheme === "light") {
-    return false;
-  }
-
-  return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return false;
 }
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const applyTheme = (useDarkMode: boolean, persist = false) => {
     document.documentElement.classList.toggle("dark", useDarkMode);

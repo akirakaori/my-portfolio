@@ -24,14 +24,13 @@ const themeScript = `
 (() => {
   try {
     const savedTheme = window.localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const shouldUseDark = savedTheme ? savedTheme === "dark" : prefersDark;
+    const shouldUseDark = savedTheme === "dark";
 
     document.documentElement.classList.toggle("dark", shouldUseDark);
     document.documentElement.style.colorScheme = shouldUseDark ? "dark" : "light";
   } catch {
-    document.documentElement.classList.add("dark");
-    document.documentElement.style.colorScheme = "dark";
+    document.documentElement.classList.remove("dark");
+    document.documentElement.style.colorScheme = "light";
   }
 })();
 `;
@@ -45,7 +44,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`dark h-full antialiased ${spaceGrotesk.variable} ${inter.variable}`}
+      className={`h-full antialiased ${spaceGrotesk.variable} ${inter.variable}`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
