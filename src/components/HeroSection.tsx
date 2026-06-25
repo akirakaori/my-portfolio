@@ -45,7 +45,7 @@ export default function HeroSection() {
             Building{" "}
             <span className="gradient-text">Scalable</span>
             <br />
-           
+            Software Solutions
           </h1>
 
           <p className="mt-7 text-xl font-semibold text-[#6E5A48] dark:text-purple-200">
