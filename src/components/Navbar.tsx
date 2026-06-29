@@ -78,12 +78,19 @@ export default function Navbar() {
           href="/#home"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="text-sm font-black tracking-wide text-black sm:text-base dark:text-white"
+          className="flex items-center gap-2 text-sm font-black tracking-wide text-black sm:gap-3 sm:text-base dark:text-white"
         >
-          <span className="bg-gradient-to-r from-[#D4B483] to-[#B7925D] bg-clip-text text-transparent dark:from-fuchsia-300 dark:via-violet-300 dark:to-sky-300">
-            ASHIKA
-          </span>{" "}
-          KAMBANG
+          <img
+            src="/icon.png"
+            alt="Ashika Kambang logo"
+            className="h-9 w-9 shrink-0 rounded-full object-cover"
+          />
+          <span>
+            <span className="bg-gradient-to-r from-[#D4B483] to-[#B7925D] bg-clip-text text-transparent dark:from-fuchsia-300 dark:via-violet-300 dark:to-sky-300">
+              ASHIKA
+            </span>{" "}
+            KAMBANG
+          </span>
         </motion.a>
 
         <div className="hidden items-center gap-7 lg:flex">

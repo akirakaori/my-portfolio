@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Ashika Kambang",
-  description: "Personal portfolio built with Next.js",
+  description: "Portfolio of Ashika Kambang",
 };
 
 const themeScript = `
